@@ -101,7 +101,7 @@ testCase.generateRandomArray = generateRandomArray;
  */
 const testSortAlgorithm = (
   algorithmsName: string,
-  sortAlgorithm: (array: number[]) => number[],
+  sortAlgorithm: (array: number[], options?: any) => number[],
   array: number[],
   config?: ConfigType
 ): number[] => {

@@ -9,7 +9,7 @@ const { generateRandomArray, testSortAlgorithm } = testCase;
 function quickSort(array: number[], start?: number, end?: number): number[] {
   // 当数组仅剩一项时，不需要分区也有序了，终止
   if (start !== undefined && start === end) {
-    return;
+    return array;
   }
   start = start || 0;
   end = end || array.length - 1;
