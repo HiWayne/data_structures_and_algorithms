@@ -19,6 +19,7 @@
  */
 
 /**
+ * @description 跳表实现
  * @method insert 插入或更改
  * @method remove 删
  * @method get    查
@@ -38,7 +39,7 @@ class SkipList {
     this.head.right = this.tail;
     this.tail.left = this.head;
   }
-  public insert(key: number, value: any): void {
+  public insert(key: number, value: any): boolean {
     const node = this.findNode(key);
     let i = 0;
     // 已经存在，直接改值
@@ -78,6 +79,7 @@ class SkipList {
       }
       this.size++;
     }
+    return true;
   }
   public remove(key: number): boolean {
     let node: SkipListNode<any> | undefined = this.findNode(key);
@@ -117,7 +119,7 @@ class SkipList {
     return node;
   }
   // 创建一层空索引，当某值得索引超过当前最大层数时，需要头尾节点向上提升一层
-  private createEmptyLevel() {
+  private createEmptyLevel(): void {
     const headUpNode = new SkipListNode(SkipListNode.negInf, null);
     const tailUpNode = new SkipListNode(SkipListNode.posInf, null);
     headUpNode.right = tailUpNode;
@@ -153,11 +155,18 @@ class SkipListNode<T> {
 
 // test
 const skipList = new SkipList();
-skipList.insert(0, "跳表节点1");
-skipList.insert(1, { name: "跳表节点2" });
-console.log(skipList.get(0));
-console.log(skipList.get(1));
-skipList.remove(1);
-console.log(skipList.get(1));
-skipList.insert(0, "新跳表节点1");
-console.log(skipList.get(0));
+console.log("insert 0: 跳表节点1, result", skipList.insert(0, "跳表节点1"));
+console.log(
+  "insert 1: {name: '跳表节点2'}, result",
+  skipList.insert(1, { name: "跳表节点2" })
+);
+console.log("get 0, result", skipList.get(0));
+console.log("get 1, result", skipList.get(1));
+console.log("remove 1, result", skipList.remove(1));
+console.log("get 1, result", skipList.get(1));
+console.log("remove 1 again, result", skipList.remove(1));
+console.log(
+  "insert(update) 0 新跳表节点1, result",
+  skipList.insert(0, "新跳表节点1")
+);
+console.log("get 0, result", skipList.get(0));

@@ -18,6 +18,7 @@
  * 从算法实现难度上来比较，skiplist比平衡树要简单。
  */
 /**
+ * @description 跳表实现
  * @method insert 插入或更改
  * @method remove 删
  * @method get    查
@@ -72,6 +73,7 @@ var SkipList = /** @class */ (function () {
             }
             this.size++;
         }
+        return true;
     };
     SkipList.prototype.remove = function (key) {
         var node = this.findNode(key);
@@ -144,11 +146,12 @@ var SkipListNode = /** @class */ (function () {
 }());
 // test
 var skipList = new SkipList();
-skipList.insert(0, "跳表节点1");
-skipList.insert(1, { name: "跳表节点2" });
-console.log(skipList.get(0));
-console.log(skipList.get(1));
-skipList.remove(1);
-console.log(skipList.get(1));
-skipList.insert(0, "新跳表节点1");
-console.log(skipList.get(0));
+console.log("insert 0: 跳表节点1, result", skipList.insert(0, "跳表节点1"));
+console.log("insert 1: {name: '跳表节点2'}, result", skipList.insert(1, { name: "跳表节点2" }));
+console.log("get 0, result", skipList.get(0));
+console.log("get 1, result", skipList.get(1));
+console.log("remove 1, result", skipList.remove(1));
+console.log("get 1, result", skipList.get(1));
+console.log("remove 1 again, result", skipList.remove(1));
+console.log("insert(update) 0 新跳表节点1, result", skipList.insert(0, "新跳表节点1"));
+console.log("get 0, result", skipList.get(0));
