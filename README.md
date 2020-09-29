@@ -161,7 +161,6 @@
 
 目录：`/packages/skipList/src`
 
-`/**
  * 以下注释摘抄自——https://github.com/wangzheng0822/algo/blob/master/typescript/17_skiplist/SkipList.ts
  *
  * 跳跃表是Redis使用的底层算法
@@ -179,15 +178,12 @@
  * 如果像Redis里的实现一样，取p=1/4，那么平均每个节点包含1.33个指针，比平衡树更有优势。
  * 查找单个key，skiplist和平衡树的时间复杂度都为O(log n)，大体相当；而哈希表在保持较低的哈希值冲突概率的前提下，查找时间复杂度接近O(1)，性能更高一些。所以我们平常使用的各种Map或dictionary结构，大都是基于哈希表实现的。
  * 从算法实现难度上来比较，skiplist比平衡树要简单。
- */`
 
- ## 哈希表(hash table)
+## 哈希表(hash table)
 
- 目录：`/packages/hashTable/src`
+目录：`/packages/hashTable/src`
 
- `/**
-  * 初始大小8
-  * 阀值0.75，大于等于0.75扩容
-  * 扩容时，数据迁移不一次性完成，分摊到每次put时迁移一个旧数据
-  * 避免哈希冲突采用链表法（拉链法）
-  */`
+ * 初始大小8
+ * 阀值0.75，大于等于0.75扩容
+ * 扩容时，数据迁移不一次性完成，分摊到每次put时迁移一个旧数据
+ * 避免哈希冲突采用链表法（拉链法）
