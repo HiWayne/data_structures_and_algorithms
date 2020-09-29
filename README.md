@@ -26,7 +26,7 @@
 ### O(n²)
 
 > **冒泡排序**
->
+>`/packages/sort/src/bubbleSort`
 > 1. **时间**
 >
 > - 最好：O(n)
@@ -42,7 +42,7 @@
 > - 稳定排序
 >
 > **插入排序**
->
+>`/packages/sort/src/insertSort`
 > 1. **时间**
 >
 > - 最好：O(n)
@@ -58,7 +58,7 @@
 > - 稳定排序
 >
 > **选择排序**
->
+>`/packages/sort/src/selectionSort`
 > 1. **时间**
 >
 > - 最好：O(n)
@@ -76,7 +76,7 @@
 ### O(nlogn)
 
 > **归并排序**
->
+>`/packages/sort/src/mergeSort`
 > 1. **时间**
 >
 > - 最好：O(nlogn)
@@ -92,7 +92,7 @@
 > - 稳定排序
 >
 > **快速排序**
->
+>`/packages/sort/src/quickSort`
 > 1. **时间**
 >
 > - 最好：O(nlogn)
@@ -110,7 +110,7 @@
 ### O(n)
 
 > **桶排序**
->
+>`/packages/sort/src/bucketSort`
 > 1. **时间**
 >
 > - 最好：O(n)
@@ -126,7 +126,7 @@
 > - 根据桶内的排序而定，本例是稳定排序
 >
 > **计数排序**
->
+>`/packages/sort/src/countingSort`
 > 1. **时间**
 >
 > - 最好：O(n)
@@ -142,7 +142,7 @@
 > - 稳定排序
 >
 > **基数排序**
->
+>`/packages/sort/src/radixSort`
 > 1. **时间**
 >
 > - 最好：O(n)
@@ -180,3 +180,14 @@
  * 查找单个key，skiplist和平衡树的时间复杂度都为O(log n)，大体相当；而哈希表在保持较低的哈希值冲突概率的前提下，查找时间复杂度接近O(1)，性能更高一些。所以我们平常使用的各种Map或dictionary结构，大都是基于哈希表实现的。
  * 从算法实现难度上来比较，skiplist比平衡树要简单。
  */`
+
+ ## 哈希表(hash table)
+
+ 目录：`/packages/hashTable/src`
+
+ `/**
+  * 初始大小8
+  * 阀值0.75，大于等于0.75扩容
+  * 扩容时，数据迁移不一次性完成，分摊到每次put时迁移一个旧数据
+  * 避免哈希冲突采用链表法（拉链法）
+  */`
