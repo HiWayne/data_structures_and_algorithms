@@ -26,7 +26,7 @@
 ### O(n²)
 
 > **冒泡排序**
->`/packages/sort/src/bubbleSort`
+>`目录：/packages/sort/src/bubbleSort`
 > 1. **时间**
 >
 > - 最好：O(n)
@@ -42,7 +42,7 @@
 > - 稳定排序
 >
 > **插入排序**
->`/packages/sort/src/insertSort`
+>`目录：/packages/sort/src/insertSort`
 > 1. **时间**
 >
 > - 最好：O(n)
@@ -58,7 +58,7 @@
 > - 稳定排序
 >
 > **选择排序**
->`/packages/sort/src/selectionSort`
+>`目录：/packages/sort/src/selectionSort`
 > 1. **时间**
 >
 > - 最好：O(n)
@@ -76,7 +76,7 @@
 ### O(nlogn)
 
 > **归并排序**
->`/packages/sort/src/mergeSort`
+>`目录：/packages/sort/src/mergeSort`
 > 1. **时间**
 >
 > - 最好：O(nlogn)
@@ -92,7 +92,7 @@
 > - 稳定排序
 >
 > **快速排序**
->`/packages/sort/src/quickSort`
+>`目录：/packages/sort/src/quickSort`
 > 1. **时间**
 >
 > - 最好：O(nlogn)
@@ -110,7 +110,7 @@
 ### O(n)
 
 > **桶排序**
->`/packages/sort/src/bucketSort`
+>`目录：/packages/sort/src/bucketSort`
 > 1. **时间**
 >
 > - 最好：O(n)
@@ -126,7 +126,7 @@
 > - 根据桶内的排序而定，本例是稳定排序
 >
 > **计数排序**
->`/packages/sort/src/countingSort`
+>`目录：/packages/sort/src/countingSort`
 > 1. **时间**
 >
 > - 最好：O(n)
@@ -142,7 +142,7 @@
 > - 稳定排序
 >
 > **基数排序**
->`/packages/sort/src/radixSort`
+>`目录：/packages/sort/src/radixSort`
 > 1. **时间**
 >
 > - 最好：O(n)
